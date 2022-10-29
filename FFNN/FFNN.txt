@@ -1,0 +1,13 @@
+Dataland Software Feed Forward Neural Network v2.0
+
+Visit:
+www.datalandsoftware.com
+
+On that site you could find few examples of using this component. 
+Unfortunately, help file isn't available.
+
+This component implements Feed forward neural network and Back propagation
+training algorithm for Delphi.
+
+For additional information contact:
+office@datalandsoftware.com

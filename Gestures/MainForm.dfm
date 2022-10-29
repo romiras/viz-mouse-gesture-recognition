@@ -1,0 +1,134 @@
+object FormGesture: TFormGesture
+  Left = 207
+  Top = 127
+  Width = 800
+  Height = 600
+  Caption = 'Gesture'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -14
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 120
+  TextHeight = 17
+  object PaintBox: TPaintBox
+    Left = 0
+    Top = 0
+    Width = 596
+    Height = 542
+    Align = alClient
+    Color = clWhite
+    ParentColor = False
+    OnMouseDown = PaintBoxMouseDown
+    OnMouseMove = PaintBoxMouseMove
+    OnMouseUp = PaintBoxMouseUp
+  end
+  object pnlInfo: TPanel
+    Left = 596
+    Top = 0
+    Width = 196
+    Height = 542
+    Align = alRight
+    BevelOuter = bvNone
+    TabOrder = 0
+    object Log: TMemo
+      Left = 0
+      Top = 0
+      Width = 196
+      Height = 441
+      Align = alClient
+      BevelKind = bkFlat
+      BorderStyle = bsNone
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = 'Courier New'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 0
+    end
+    object PnlCommands: TPanel
+      Left = 0
+      Top = 441
+      Width = 196
+      Height = 101
+      Align = alBottom
+      BevelOuter = bvNone
+      TabOrder = 1
+      object lblTrain: TLabel
+        Left = 10
+        Top = 21
+        Width = 35
+        Height = 17
+        Caption = 'Train:'
+      end
+      object txtLearn: TEdit
+        Left = 52
+        Top = 10
+        Width = 54
+        Height = 25
+        TabOrder = 0
+        OnKeyPress = txtLearnKeyPress
+      end
+      object btnSave: TButton
+        Left = 10
+        Top = 46
+        Width = 65
+        Height = 22
+        Caption = 'Save'
+        TabOrder = 1
+        OnClick = btnSaveClick
+      end
+      object btnTrain: TButton
+        Left = 84
+        Top = 46
+        Width = 74
+        Height = 22
+        Caption = 'Train'
+        TabOrder = 2
+        OnClick = btnTrainClick
+      end
+      object btnShow: TButton
+        Left = 10
+        Top = 73
+        Width = 65
+        Height = 22
+        Caption = 'Show'
+        TabOrder = 3
+        OnClick = btnShowClick
+      end
+    end
+  end
+  object pnlText: TPanel
+    Left = 0
+    Top = 542
+    Width = 792
+    Height = 26
+    Align = alBottom
+    Alignment = taLeftJustify
+    BevelOuter = bvNone
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+  end
+  object FFNN: TFFNN
+    InputCount = 32
+    OutputCount = 28
+    InputMax = 1
+    OutputMax = 1
+    NLayers = <>
+    BPSpeed = 0.1
+    Inertion = 0.1
+    Left = 416
+    Top = 8
+  end
+end
